@@ -4,8 +4,10 @@
 
 // $mainColor: #b2dca2;
 $mainColor: hsl(var(--hue), 45%, 75%);
-$dark: #343a40;
 $red: #dc3545;
 $white: #eee;
 
-$darker: darken($dark, 7%);
+$_dark: #343a40;
+$dark: darken($_dark, 12%);
+$darker: darken($dark, 1%);
+
