@@ -13,6 +13,8 @@ html,
   background-color: $dark;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  overflow-y: scroll; // Prevent jitter from scroll bar popping in/out when page shrinks below window height
 }
 
 #App {
