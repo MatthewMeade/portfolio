@@ -27,7 +27,7 @@ export const portfolioItems = [
     url: "https://2048.matthewmeade.ca",
     urlText: "Play",
     gitHub: "https://github.com/MatthewMeade/2048Clone",
-    tags: ["JavaScript", "p5.js", "canvas"],
+    tags: ["JavaScript", "p5.js", "Canvas"],
     coverImage: cdnImg("2048Clone/coverImage.png"),
     images: ["Video.webm"].map((i) => cdnImg(`2048Clone/${i}`)),
   },
@@ -135,6 +135,12 @@ export const portfolioItems = [
     tags: ["Java", "Swing", "Game", "OOP", "Moose"],
   },
 ].map((e) => ({ ...e, key: e.title.split(" ").join("_") }));
+
+
+// These tags will appear first in the filter
+const IMPORTANT_TAGS = ["JavaScript", 'React', "React/Redux", "Express", "Java", "Docker", "MongoDB", "Android"];
+// Collect all unique tags in portfolioItems
+export const allTags = [...new Set([...IMPORTANT_TAGS, ...portfolioItems.reduce((acc, cur) => [...acc, ...cur.tags],[])])];
 
 export const coverLinks = [
   {

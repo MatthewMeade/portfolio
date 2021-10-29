@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import "./App.scss";
 
-import "@fortawesome/fontawesome-free/js/all";
+import  "@fortawesome/fontawesome-free/js/all";
 import TopBar from "./components/navbar/TopBar";
 import Bio from "./components/Bio/Bio";
 import useWindowDimensions from "./hooks/windowDims";

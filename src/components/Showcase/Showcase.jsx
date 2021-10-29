@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import { Link, useParams, useHistory } from "react-router-dom";
+import Select from "react-select";
 
-import { portfolioItems } from "../../data/portfolioData";
+import { portfolioItems, allTags } from "../../data/portfolioData";
 
 import useWindowDimensions from "../../hooks/windowDims";
 import Markdown from "../Markdown/Markdown";
@@ -51,9 +52,12 @@ function ItemBody({ item = {} }) {
   );
 }
 
-function Header({ selectedItem }) {
+function Header({ selectedItem, currentFilter, setFilter }) {
   const item = selectedItem || {};
   const { breakpoint } = useWindowDimensions();
+
+  const selectOptions = allTags.map((key) => ({ value: key, label: key }));
+  const currentFilterValue = selectOptions.filter((t) => currentFilter.includes(t.value));
 
   const { url, urlText = "Link", gitHub, title = "Portfolio" } = item;
   return (
@@ -66,20 +70,35 @@ function Header({ selectedItem }) {
         )}
       </div>
       <h1>{title}</h1>
-      <div className="linkContainer">
-        {gitHub && (
-          <a href={gitHub} target="_blank" rel="noopener noreferrer">
-            {" "}
-            <i className="fab fa-github" /> {breakpoint > 0 && "GitHub"}
-          </a>
-        )}
-        {url && (
-          <a href={url} target="_blank" rel="noopener noreferrer">
-            {" "}
-            <i className="fas fa-globe"></i> {breakpoint > 0 && urlText}
-          </a>
-        )}
-      </div>
+      {selectedItem && (
+        <div className="linkContainer">
+          {gitHub && (
+            <a href={gitHub} target="_blank" rel="noopener noreferrer">
+              {" "}
+              <i className="fab fa-github" /> {breakpoint > 0 && "GitHub"}
+            </a>
+          )}
+          {url && (
+            <a href={url} target="_blank" rel="noopener noreferrer">
+              {" "}
+              <i className="fas fa-globe"></i> {breakpoint > 0 && urlText}
+            </a>
+          )}
+        </div>
+      )}
+      {!selectedItem && (
+        <div className={`tagSearch ${currentFilterValue.length <= 1 ? 'empty' : ''}`}>
+          <Select
+            options={selectOptions}
+            isMulti
+            onChange={(a) => setFilter(a.map((t) => t.value))}
+            value={currentFilterValue}
+            placeholder={<span className="searchPlaceholder"><i className="fas fa-search" /> Search...</span>}
+            classNamePrefix="react-select"
+            className="react-select"
+          />
+        </div>
+      )}
     </div>
   );
 }
@@ -130,11 +149,15 @@ function ItemCard({ item, selected }) {
   );
 }
 
-export default function Showcase({ setShowLinks }) {
+export default function Showcase() {
   const { item: selected } = useParams();
+  const [currentFilter, setFilter] = useState([]);
+
   const selectedItem = portfolioItems.filter((i) => i.key === selected)[0];
 
-  const cards = portfolioItems.map((i) => <ItemCard key={i.key + "_card"} item={i} selected={i.key === selected} />);
+  const cards = portfolioItems
+    .filter((i) => i.tags.some((t) => currentFilter.includes(t)) || currentFilter.length === 0)
+    .map((i) => <ItemCard key={i.key + "_card"} item={i} selected={i.key === selected} />);
 
   // Pre load images to prevent pop in on carousels
   useEffect(() => {
@@ -156,7 +179,12 @@ export default function Showcase({ setShowLinks }) {
 
   return (
     <div className="showcase _container">
-      <Header selectedItem={selectedItem} s />
+      <Header
+        selectedItem={selectedItem}
+        allItems={portfolioItems}
+        currentFilter={currentFilter}
+        setFilter={setFilter}
+      />
       {selected && <ItemBody item={selectedItem} />}
       <div className="cardGrid">{cards}</div>
     </div>
