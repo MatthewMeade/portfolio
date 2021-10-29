@@ -3,6 +3,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import { Link, useParams, useHistory } from "react-router-dom";
 import Select from "react-select";
+import FlipMove from "react-flip-move";
 
 import { portfolioItems, allTags } from "../../data/portfolioData";
 
@@ -87,13 +88,17 @@ function Header({ selectedItem, currentFilter, setFilter }) {
         </div>
       )}
       {!selectedItem && (
-        <div className={`tagSearch ${currentFilterValue.length <= 1 ? 'empty' : ''}`}>
+        <div className={`tagSearch ${currentFilterValue.length <= 1 ? "empty" : ""}`}>
           <Select
             options={selectOptions}
             isMulti
             onChange={(a) => setFilter(a.map((t) => t.value))}
             value={currentFilterValue}
-            placeholder={<span className="searchPlaceholder"><i className="fas fa-search" /> Search...</span>}
+            placeholder={
+              <span className="searchPlaceholder">
+                <i className="fas fa-search" /> Search...
+              </span>
+            }
             classNamePrefix="react-select"
             className="react-select"
           />
@@ -157,7 +162,8 @@ export default function Showcase() {
 
   const cards = portfolioItems
     .filter((i) => i.tags.some((t) => currentFilter.includes(t)) || currentFilter.length === 0)
-    .map((i) => <ItemCard key={i.key + "_card"} item={i} selected={i.key === selected} />);
+    .map((i) => <ItemCard key={i.key + "_card"} item={i} selected={i.key === selected} />)
+    .map((i) => <span key={i.key + "_card"}>{i}</span>);
 
   // Pre load images to prevent pop in on carousels
   useEffect(() => {
@@ -177,6 +183,8 @@ export default function Showcase() {
     });
   });
 
+  const animation = "fade";
+
   return (
     <div className="showcase _container">
       <Header
@@ -186,7 +194,9 @@ export default function Showcase() {
         setFilter={setFilter}
       />
       {selected && <ItemBody item={selectedItem} />}
-      <div className="cardGrid">{cards}</div>
+      <FlipMove className="cardGrid" enterAnimation={animation} leaveAnimation={animation}>
+        {cards}
+      </FlipMove>
     </div>
   );
 }
