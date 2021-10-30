@@ -13,10 +13,11 @@
       box-sizing: border-box;
     }
 
-    a:hover {
+    .linkContainer a:hover {
       text-decoration: none;
-      border-top: 3px solid $dark;
-      border-bottom: 3px solid $mainColor;
+      // border-top: 3px solid $dark;
+      // border-bottom: 3px solid $mainColor;
+      box-shadow: 0 1px 0 $mainColor;
       color: inherit;
     }
 
@@ -53,6 +54,7 @@
 
       grid-auto-flow: column;
       gap: 1em;
+      width: 100%;
     }
 
     .btnContainer {
