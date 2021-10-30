@@ -55,7 +55,7 @@ export const portfolioItems = [
     description: homeserver.trim(),
     url: "https://github.com/MatthewMeade/homeserver/blob/main/docker-compose.yml",
     gitHub: "https://github.com/MatthewMeade/QRFileTransfer",
-    tags: ["Docker", "NGINX", "Cloudflare", "NAS"],
+    tags: ["Docker", "NGINX", "Cloudflare"],
     coverImage: cdnImg("homeserver/cover.png"),
     images: ["cover.png"].map((i) => cdnImg(`homeserver/${i}`)),
   },
