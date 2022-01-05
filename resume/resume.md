@@ -19,8 +19,8 @@
 -  Worked with MongoDB, SQL, and Neo4j Databases
 -  Proficient with Git to manage source code and collaborate with team members
 -  DevOps Experience:
-    - Maintaining the build and deployment pipeline for a large project 
-    - Performing regular server maintenance
+    - Maintaining the build and deployment pipeline for large projects 
+    - Performing Routine maintenance on Ubuntu and IIS servers
 -  Fast learner, ability to quickly acquire new skills and knowledge
 -  Strong problem solving skills
 -  Able to work independently or collaborating closely with a team
@@ -31,18 +31,20 @@
 
 ### Intermediate Software Developer at Radient360: May 2019 - Present
 
--   Development: _November 2019 - present_
-    -   Collaborating as a team using an Agile development methodology to produce web applications
-    -   Daily tasks include writing business logic and layout in Radient360's internal configuration language, as well as contributing the the underlying application framework written in Javascript using React/NodeJS
-    -   Built an internal web app which showcases and provides documentation for components available in Radient360's framework
-    -   Built a tool which allows developers to build and test data pipelines
--   Dev Ops: _May - December 2019_
-    -   Quickly adapted to Dev Ops role having no prior experience
-    -   Rewrote company's authentication api to support migration from WSO2 to AWS Cognito and built web app to manage roles
-    -   Development of infrastructure as code, handling automatic server maintenance and Jenkins code deployments using Ansible
-    -   Dockerized MERN app to prepare for migrating services to Kubernetes
-    -   Provisioned and maintained Ubuntu and Windows servers hosted on the AWS EC2 platform
-    -   Managed the backup and restoration of Neo4j Databases
+#### Development: _November 2019 - present_
+
+-   Collaborating as a team using an Agile development methodology to produce web applications
+-   Daily tasks include writing business logic and layout in Radient360's internal configuration language, as well as contributing the the underlying application framework written in Javascript using React/NodeJS
+-   Built an internal web app which showcases and provides documentation for components available in Radient360's framework
+-   Built a tool which allows developers to build and test data pipelines
+####  Dev Ops: _May - December 2019_
+
+-   Quickly adapted to Dev Ops role having no prior experience
+-   Rewrote company's authentication api to support migration from WSO2 to AWS Cognito and built web app to manage roles
+-   Development of infrastructure as code, handling automatic server maintenance and Jenkins code deployments using Ansible
+-   Dockerized MERN app to prepare for migrating services to Kubernetes
+-   Provisioned and maintained Ubuntu and Windows servers hosted on the AWS EC2 platform
+-   Managed the backup and restoration of Neo4j Databases
 
 ### Software Developer Intern at ClearRisk: September - December 2018
 
