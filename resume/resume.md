@@ -75,7 +75,3 @@
 -   Graduated with a 3.966 GPA
 -   As part of a final project, built a prototype mobile first sales application using the MERN stack for a sales company
 -   Classes include: HTML/CSS, JavaScript, Desktop/Server/Android Java development, Apple development with swift, SQL, Systems Architecture
-
-### High School Honours at St. James Regional High: 2010 - 2016
-
--   Received award for Outstanding Performance in Sr. High Information Technology
