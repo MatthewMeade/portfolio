@@ -57,7 +57,7 @@ h2#skills-and-abilities {
     line-height: 1.25em;
 }
 
-p, li {
+p, li, h3, h4 {
     font-size: 12pt;
 }
 
