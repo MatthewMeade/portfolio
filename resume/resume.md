@@ -42,9 +42,9 @@
     - Maintaining feature equivalency and witing scripts to migrate client data across schemas
 -   Added self signup functionality to the company website, automating the process of clients requesting demos
     - Form protected by CAPTCHA, rate limiting, email verification
-    - Upon account confirmation, a new account is created in AWS COGNITO and the user is notified with instructions to log in
+    - After account confirmation, a new account is created in AWS COGNITO and the user is notified with instructions to log in
 -   Contributed to client administration tools which allow admin users to customize their experience in the app
--   Daily tasks include writing business logic and layout in Radient360's internal configuration language, as well as contributing the the underlying application framework written in Javascript using React/NodeJS
+-   Daily tasks include writing business logic and layout in Radient360's internal configuration language, as well as contributing to the application framework written in Javascript using React/NodeJS
 -   Built an internal web app which showcases and provides documentation for components available in Radient360's framework
 -   Built a tool which allows developers to build and test data pipelines
 ####  Dev Ops: _May - December 2019_
