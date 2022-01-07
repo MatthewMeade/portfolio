@@ -57,9 +57,6 @@ h2#skills-and-abilities {
     line-height: 1.25em;
 }
 
-p, li, h3, h4 {
-    font-size: 12pt;
-}
 
 li {
     margin-top: 10px;
@@ -73,13 +70,6 @@ li {
     font-weight: normal;
 }
 
-ul {
-    padding-left: 0;
-}
-
-ul ul {
-    padding-left: 1em;
-}
 
 .page-break {
     /* page-break-after: always; */
