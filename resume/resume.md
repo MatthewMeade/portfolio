@@ -53,7 +53,7 @@
 -   Rewrote application's authentication api to support migration from WSO2 to AWS Cognito and built web app to manage roles
 -   Development of infrastructure as code, handling automatic server maintenance and Jenkins code deployments using Ansible
 -   Dockerized MERN apps to prepare for migrating services to Kubernetes
--   Provisioned and maintained Ubuntu and Windows servers hosted on the AWS EC2 platform
+-   Provisioned and maintained Ubuntu and Windows servers hosted AWS EC2
 -   Managed the backup and restoration of Neo4j Databases
 
 ### Software Developer Intern at ClearRisk: September - December 2018
