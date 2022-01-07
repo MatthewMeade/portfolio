@@ -45,8 +45,16 @@ h2#skills-and-abilities {
 
 #headerLinks p {
     margin: 5px 0;
+    text-align: center;
 }
 
+#headerLinks p:first-child {
+    text-align: left;
+}
+
+#headerLinks p:last-child {
+    text-align: right;
+}
 
 .headerPart1 {
     font-weight: normal;
