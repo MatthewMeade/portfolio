@@ -78,7 +78,7 @@ li {
 
 #QR_CODE {
     position: absolute;
-    right: 0;
+    right: 2mm;
     top: 0;
     width: 16mm;
 }
