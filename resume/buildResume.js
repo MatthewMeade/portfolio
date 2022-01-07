@@ -87,7 +87,7 @@ async function generate(content, outputName, outputDir, ext) {
             as_html: ext === 'html',
             pdf_options: {
                 format: 'Letter',
-                margin: '0mm 0mm' // Define margins in CSS
+                margin: '0mm 0mm'
             },
             launch_options: {
                 defaultViewport: {
