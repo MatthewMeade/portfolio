@@ -1,3 +1,4 @@
+<img id ="QR_CODE" src="https://cdn.matthewmeade.ca/portfolio/SITE_QR.png" />
 # Matthew Meade
 
 <div id="headerLinks">
