@@ -43,16 +43,18 @@ h2#skills-and-abilities {
     text-decoration: none;
 }
 
-#headerLinks a:last-child {
-    color: orange !important;
-    font-weight: bold;
-    text-decoration: none;
-}
-
 #headerLinks p {
     margin: 5px 0;
+    text-align: center;
 }
 
+#headerLinks p:first-child {
+    text-align: left;
+}
+
+#headerLinks p:last-child {
+    text-align: right;
+}
 
 .headerPart1 {
     font-weight: normal;
