@@ -82,7 +82,7 @@ async function generate(content, outputName, outputDir, ext) {
     await mdToPdf(
         { content },
         {
-            dest: `${outputDir}/${outputName}.${ext}`,
+            dest: `${outputDir}/${outputName}${ext==='html' ? '_html' : ''}.${ext}`,
             stylesheet: `${__dirname}/styles.css`,
             as_html: ext === 'html',
             pdf_options: {
