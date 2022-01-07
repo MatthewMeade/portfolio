@@ -43,7 +43,7 @@ h2#skills-and-abilities {
     text-decoration: none;
 }
 
-#headerLinks a:last-of-type {
+#headerLinks a:last-child {
     color: orange !important;
     font-weight: bold;
     text-decoration: none;
