@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import "./App.scss";
@@ -11,9 +11,15 @@ import useWindowDimensions from "./hooks/windowDims";
 import "./App.scss";
 import Showcase from "./components/Showcase/Showcase";
 import Rainbow from "./components/Rainbow/Rainbow";
+import { welcomeUser } from "./util/consoleMessage";
 
 function App() {
   const { breakpoint } = useWindowDimensions();
+
+  useEffect(() => {
+    welcomeUser();
+  }, []);
+
   return (
     <Router>
       <div id="App">
