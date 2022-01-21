@@ -1,7 +1,7 @@
 const str = `
 Docker config for my home server.
 
-The primary use for the server is as a NAS with a public share. The data is made accessable on my local network with samba or from outside my network with [filebrowser](https://hub.docker.com/r/hurlenko/filebrowser). Anything in the /\`public\` folder is served over https at https://home.matthewmeade.ca/public .
+The primary use for the server is as a NAS with a public share. The data is made accessable on my local network with samba or from outside my network with [filebrowser](https://hub.docker.com/r/hurlenko/filebrowser). Anything in the /\`public\` folder is served over https.
 
 FileBrowser also allows me to share any file in the NAS, optionally with an expiring link or a password.
 
@@ -13,6 +13,7 @@ Since I don't have a static IP at home, I use [cloudflare-ddns](https://hub.dock
  - [nginx](https://hub.docker.com/_/nginx): nginx reverse proxy 
    - Routes to filebrowser / plausible
    - Serves files in the \`/public\` directory
+ - [postgres](https://hub.docker.com/_/postgres): PostgreSQL database
  - [hurlenko/filebrowser](https://hub.docker.com/r/hurlenko/filebrowser): Web based file manager
    - Remote access to files at home.matthewmeade.ca/filebrowser
    - Ability to share any file publically with custom rules per shared file
