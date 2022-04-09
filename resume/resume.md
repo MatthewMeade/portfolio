@@ -51,10 +51,10 @@
 ####  Dev Ops: _May - December 2019_
 
 -   Quickly adapted to Dev Ops role having no prior experience
--   Rewrote application's authentication api to support migration from WSO2 to AWS Cognito and built web app to manage roles
+-   Rewrote application's authentication API to support migration from WSO2 to AWS Cognito and built web app to manage roles
 -   Development of infrastructure as code, handling automatic server maintenance and Jenkins code deployments using Ansible
 -   Dockerized MERN apps to prepare for migrating services to Kubernetes
--   Provisioned and maintained Ubuntu and Windows servers hosted AWS EC2
+-   Provisioned and maintained Ubuntu and Windows servers hosted on AWS EC2
 -   Managed the backup and restoration of Neo4j Databases
 
 ### Software Developer Intern at ClearRisk: September - December 2018
@@ -74,8 +74,8 @@
 
 ### Junior Quality Assurance Analyst Radient360: May - June 2018
 
--   Developed an Automated testing framework using Python and Selenium
--   Documented found bugs by writing detailed reports in JIRA
+-   Developed an automated testing framework using Python and Selenium
+-   Identified and documented bugs, writing detailed reports in JIRA
 -   Facilitated a "Lunch and Learn" demonstrating my developed framework to the company
 
 ## Education
