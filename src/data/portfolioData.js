@@ -7,11 +7,21 @@ import subToolSubscription from "./descriptions/subsTool";
 import _2048Clone from "./descriptions/2048Clone";
 import qrTransfer from "./descriptions/qrTransfer";
 import homeserver from "./descriptions/homeserver";
+import notesApp from "./descriptions/notesApp";
 
 export const CDN_PREFIX = "https://cdn.matthewmeade.ca/portfolio";
 export const cdnImg = (p) => `${CDN_PREFIX}/${p}`;
 
 export const portfolioItems = [
+  {
+    title: "Note Taking App",
+    description: notesApp.trim(),
+    url: "https://notes.matthewmeade.ca",
+    gitHub: "https://github.com/MatthewMeade/NotesApp",
+    tags: ["JavaScript", "React", "Offline PWA", "indexedDB"],
+    coverImage: cdnImg("notesApp/list.png"),
+    images: ["list.png", "form.png", "settings.png"].map((i) => cdnImg(`notesApp/${i}`)),
+  },
   {
     title: "QR File Transfer",
     description: qrTransfer.trim(),
@@ -140,7 +150,7 @@ export const portfolioItems = [
 // These tags will appear first in the filter
 const IMPORTANT_TAGS = ["JavaScript", 'React', "React/Redux", "Express", "Java", "Docker", "MongoDB", "Android"];
 // Collect all unique tags in portfolioItems
-export const allTags = [...new Set([...IMPORTANT_TAGS, ...portfolioItems.reduce((acc, cur) => [...acc, ...cur.tags],[])])];
+export const allTags = [...new Set([...IMPORTANT_TAGS, ...portfolioItems.reduce((acc, cur) => [...acc, ...cur.tags], [])])];
 
 export const coverLinks = [
   {
